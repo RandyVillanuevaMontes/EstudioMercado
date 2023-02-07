@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Poligonos</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="guardar">Guardar</string>
+    <string name="open_map">Open Map</string>
+    <string name="New_Layer">New Layer</string>
+</resources>

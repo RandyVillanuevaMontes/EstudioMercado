@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.poligonos'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.poligonos"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+
+    implementation 'androidx.core:core-splashscreen:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.6'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    //MapsForge
+    implementation 'org.mapsforge:mapsforge-core:0.18.0'
+    implementation 'org.mapsforge:mapsforge-map:0.18.0'
+    implementation 'org.mapsforge:mapsforge-map-reader:0.18.0'
+    implementation 'org.mapsforge:mapsforge-themes:0.18.0'
+    implementation 'net.sf.kxml:kxml2:2.3.0'
+    implementation 'org.mapsforge:mapsforge-map-android:0.18.0'
+    implementation 'com.caverock:androidsvg:1.4'
+    implementation 'org.mapsforge:mapsforge-core:0.18.0'
+    implementation 'org.mapsforge:mapsforge-poi:0.18.0'
+    implementation 'org.mapsforge:mapsforge-poi-android:0.18.0'
+    implementation 'org.mapsforge:sqlite-android:0.18.0'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-armeabi-v7a'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-arm64-v8a'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-x86'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-x86_64'
+}
